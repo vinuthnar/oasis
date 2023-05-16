@@ -1,0 +1,115 @@
+import java.util.*;
+public class Onlineexam { private String username;
+private String password;
+private boolean isloggedin;
+private int timeremaining;
+private int questioncount;
+private int[] useranswers;
+private int[] correctanswers;
+public Onlineexam(String username,String password) 
+{ 
+this.username=username; this.password=password;
+System.out.println("successfully registered");
+this.isloggedin=false;
+this.timeremaining=10;
+//in minutes 
+this.questioncount=10;
+this.useranswers=new int[questioncount];
+this.correctanswers=new int[questioncount];
+//intialize correct answers with random values 0 or1 
+for(int i=0;i<questioncount;i++)
+{
+correctanswers[i]=(int) Math.round(Math.random());
+}
+}
+public void login()
+{
+System.out.println("login to take the exam");
+Scanner sc=new Scanner(System.in); 
+System.out.println("username:");
+String inputuser=sc.nextLine();
+System.out.println("password:");
+String inputuser=sc.nextLine();
+         System.out.print("password:");
+         String inputPassword=sc.nextLine();
+         if(inputuser.equals(username) && inputPassword.equals(password))
+          {
+                 isloggedin=true;
+                 System.out.println("login successfully");
+          }
+          else
+          {
+                     System.out.println("login failed");
+           }
+      }
+      public void logout()
+       {
+          isloggedin=false;
+          System.out.println("logout successfully");
+       }
+       public void startexam()
+       {
+              if(!isloggedin)
+               {
+                    System.out.println("please login first");
+                     return;
+                }
+                Scanner sc=new Scanner(System.in);
+                System.out.println("you have" +timeremaining+ " minutes to complete");
+                for(int i=0;i<questioncount;i++)
+                {
+                         System.out.println("question"+(i+1) +":");
+                         System.out.println("1.option1");
+                         System.out.println("2.option2");
+                         System.out.println("your answer (1 or 2):");
+                         int answer =sc.nextInt();
+                         useranswers[i]=answer;
+                 }
+                 System.out.println("would you like to submit? \n1:yes \n2:no");
+                 int n=sc.nextInt();
+                  if(n==1)
+                 {
+                             submitexam();
+                  }
+                  else
+                  {
+                        //automatic submit the exam when time is up.
+                          try
+                          {
+                              Thread.sleep(timeremaining *10*1000);
+                           }
+                           catch(InterruptedException e)
+                           {
+                                e.printStackTrace();
+                                submitexam();
+                           }
+                   }
+        }
+        public void submitexam()
+        {
+              if(!isloggedin)
+              {
+                       System.out.println("please login first");
+                        return;
+               }
+               int score=0;
+               for(int i=0;i<questioncount;i++)
+               {
+                      if(useranswers[i]==correctanswers[i])
+                      {
+                            score++;
+                       }
+                }
+                System.out.println("your score is"+score+"outof"+questioncount);
+                logout();
+         }
+          public static void main(String args[])
+        {
+               Scanner sc=new Scanner(System.in);
+               System.out.println("enter your username and password");
+               String uname=sc.nextLine();
+               String pword=sc.nextLine();
+               Onlineexam examsystem=new Onlineexam(uname,pword);
+                examsystem.login();
+                examsystem.startexam();
+       }
