@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="veiwport" content="width=device-width,initial-scale=1.0"> <link rel="stylesheet" href="style.css"> <title>depatmental webpage</title> 
+    </head> 
+    <body> 
+        <div class="row"> 
+            <div class="column" style="background-color:rgb(240, 240, 240);"> 
+                <h1 style="text-indent:70px;">RVR & JC</h1> 
+                <p style="text-indent:30px;"><b>College of Engineering(Autonomous)</b><br>NAAC 'A+' Grade || 5 Times NBA Accredited || ISO 9001:2015 Certified</p> 
+            </div> 
+            <div class="column" style="background-color:rgb(240, 240, 240);"> 
+                <p style="text-align:center;">Department of</p> 
+                <h2 style="text-align:center;">Computer Science & Engineering</h5> 
+                    <p style="text-align:center;">(Internet of Things)</p>
+                 </div> 
+            </div>  
+            <nav> 
+                <div class="menu" style="background-color:rgb(240, 240, 240);">
+<i class="fa fa-home w3-large"aria-hidden="true"></i>
+                    <a href ="#">Main Website</a>
+                    <a href ="#">Home</a>
+                    <a href ="#">People</a>
+                    <a href ="#">Academics</a>
+                    <a href ="#">Research</a>
+                    <a href ="#">Resources</a>
+                    <a href ="#">Student Activities</a>
+                    </div>
+                </nav>
+<marquee class="lab" style="color:black;">RVR&JC college of engineering</marquee>
+
+<div class="lab"><h3>Program overveiw</h3>
+</div><br>
+<div class="image">
+<img src="http://cso.rvrjcce.ac.in/images/cse-iot.png" width=100%; height=400%;/>
+</div>
+<div class="content">
+Internet of Things (IoT) is among the latest innovations in the area of Computer Science & Engineering and IT. This specialization covers
+the development of IoT products and services along with the devices for sensing, actuating, processing and inter communication. The program aims to train the students and develop within them strong theoretical foundation, systematic professional knowledge and strong practical skills in the fields of web-technologies, real time embedded systems, communications protocols and collaborative intelligence.
+<p>The four - year programme 'B. Tech., CSE (IoT)' connects the academia and industries with the young minds in an effective way. It is an intensive and skilful program to utilize the potential and the innovative passion of students. The scheme of the programme is strongly aligned with the present and forthcoming requirements of the industries, and academia across the globe. Thus, it offers the ample of carrier opportunities to the students. In favour of the never ending process of learning and research, this programme meets the global standards of master's Programme in Artificial Intelligence, Machine Learning, Deep Learning, IoT, Smart Cities, Smart Healthcare and Smart Farming offered at the national and international universities of repute.</p>
+<h4> Highlights</h4>
+<ul>
+<li>One of the top colleges in Andhra Pradesh is now offering best B.Tech Program in Internet of Things.</li>
+<li>Builds a solid theoretical and strong practical skills in the fields of communication networks and IT that provides a wide range of applications in IoT through industry-oriented curriculum.</li>
+<li>Learn through real time industry projects sponsored by global leaders in IoT industry and regular live sessions by industry experts.</li>
+<li>Provides expertise in ARM based System on Chip design and Embedded system, sensors and instrumentation, edge and cloud computing , Digital Signal Processing etc.</li>
+</ul>
+</div><br>
+<div class="foot">
+<p style="color:orangered;">Quick Links</p>
+<a href ="http://cso.rvrjcce.ac.in/Scheme%20AI%20&%20ML.pdf" class=foo>Scheme(2021-22)</a>
+</div>
+</body>
+    </html>
